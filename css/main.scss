@@ -55,7 +55,7 @@ nav {
     }
   }
 
-  .close {
+  svg.close {
     float: right;
     margin: 2em;
     width: 2.5em;
@@ -108,5 +108,118 @@ h1 {
 
   .desc {
     line-height: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 680px){
+  body {
+    margin: 1.5em 5em;
+  }
+}
+
+@media only screen and (min-width: 920px){
+  .menu {
+    display: none;
+  }
+
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+
+    svg.close {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      margin: 0;
+
+      a {
+        color: #fff;
+        padding: .5em 1.5em;
+        font-size: .9rem;
+        &:hover {
+          background: none;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 42em;
+  }
+
+  .logo {
+    color: #000;
+    
+    span {
+      color: #CE081F;
+    }
+  }
+
+  .hero {
+    color: #000;
+    height: auto;
+    width: 40%;
+    margin-bottom: 8em;
+
+    svg.down-arrow {
+      stroke: #000;
+      position: unset;
+
+      path {
+        fill: #000;
+      }
+    }
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 3em;
+    margin-bottom: 8em;
+
+    img {
+      width: 25em;
+    }
+
+    .content {
+      text-align: right;
+      width: 25em;
+    }
+
+    &.left {
+      grid-template-areas: 
+        "left right";
+      img {
+        grid-area: left;
+      }
+
+      .content {
+        grid-area: right;
+        text-align: left;
+        width: 25em;
+        justify-self: left;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature {
+    gap: 0;
   }
 }
