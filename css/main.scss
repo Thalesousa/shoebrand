@@ -68,7 +68,7 @@ header {
   justify-content: space-between;
 
   svg {
-    width: 3em;
+    width: 2em;
     margin-top: -.6em;
     cursor: pointer;
   }
@@ -88,7 +88,7 @@ h1 {
 
   .down-arrow {
     position: absolute;
-    bottom: 2em;
+    bottom: 8em;
     width: 1em;
     stroke: #fff;
     animation: moveArrow 1s alternate-reverse infinite;
@@ -113,6 +113,10 @@ h1 {
   .desc {
     line-height: 1.5rem;
   }
+}
+
+.open-nav {
+  transform: translateY(0);
 }
 
 @media only screen and (min-width: 680px){
@@ -239,7 +243,7 @@ h1 {
 
 @keyframes moveArrow {
   from {
-    transform: translateY(-30px);
+    transform: translateY(30px);
   }
   to {
     transform: translateY(0);
